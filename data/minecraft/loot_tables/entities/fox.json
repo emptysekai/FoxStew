@@ -2,18 +2,6 @@
     "type": "minecraft:entity",
     "pools": [
         {
-            "functions": [
-                {
-                    "function": "set_lore",
-                    "lore": [
-                        "§7配料§r",
-                        "§b烤香猪一块§3、§b脆脆鲨一条§r",
-                        "§b仙人掌一节§3、§b海龟蛋一个§r",
-                        "§b勇于献身的狐狸一只§3（可选）§r"
-                    ],
-                    "replace": false
-                }
-            ],
             "rolls": 1,
             "conditions": [
                 {
@@ -28,7 +16,19 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:suspicious_stew"
+                    "name": "minecraft:suspicious_stew",
+                    "functions": [
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                "§7配料§r",
+                                "§c烤香猪§4一块§r §e脆脆鲨§6一条§r",
+                                "§a仙人掌§2一节§r §b海龟蛋§3一个§r",
+                                "§7勇于献身的狐狸一只§8（可选）§r"
+                            ],
+                            "replace": false
+                        }
+                    ]
                 }
             ]
         },
@@ -56,7 +56,61 @@
                 {
                     "type": "minecraft:tag",
                     "name": "foxstew:fallen_breath_collection",
-                    "expand": true
+                    "expand": true,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "type": "minecraft:binomial",
+                                "n": 19,
+                                "p": 0.19810
+                            }
+                        },
+                        {
+                            "function": "minecraft:looting_enchant",
+                            "limit": 893,
+                            "count": {
+                                "min": 0,
+                                "max": 3
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "minecraft:killed_by_player",
+                    "inverse": true
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "foxstew:this_name_is_fallen_breath"
+                },
+                {
+                    "condition": "minecraft:random_chance_with_looting",
+                    "chance": 0.05,
+                    "looting_multiplier": 0.01
+                }
+            ],
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:suspicious_stew",
+                    "functions": [
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                "§7配料§r",
+                                "§c烤香猪§4一块§r §e脆脆鲨§6一条§r",
+                                "§a仙人掌§2一节§r §b海龟蛋§3一个§r",
+                                "§7勇于献身的狐狸一只§8（可选）§r"
+                            ],
+                            "replace": false
+                        }
+                    ]
                 }
             ]
         }
