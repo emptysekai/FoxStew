@@ -1,0 +1,18 @@
+{
+    "item.minecraft.suspicious_stew": "狐狸煲",
+    "item.minecraft.cooked_porkchop": "烤香猪",
+    "item.minecraft.cooked_cod": "脆脆鲨",
+
+    "block.minecraft.cactus": "横眉",
+    "item.minecraft.cactus": "横眉",
+    "block.minecraft.potted_cactus": "横眉盆栽",
+    "death.attack.cactus": "%1$s被戳死了",
+    "death.attack.cactus.player": "%1$s在试图逃离%2$s时撞上了横眉",
+
+    "block.minecraft.turtle_egg": "海蛋",
+    "item.minecraft.turtle_egg": "海蛋",
+    "subtitles.entity.turtle.egg_break": "海蛋：破裂",
+    "subtitles.entity.turtle.egg_crack": "海蛋：裂开",
+    "subtitles.entity.turtle.egg_hatch": "海蛋：孵化",
+    "subtitles.entity.zombie.destroy_egg": "海蛋：被踩踏"
+}
