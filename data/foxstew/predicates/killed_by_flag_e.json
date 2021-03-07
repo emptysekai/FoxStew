@@ -1,0 +1,8 @@
+{
+    "condition": "entity_properties",
+    "entity": "killer",
+    "predicate": {
+        "type": "minecraft:polar_bear",
+        "nbt": "{CustomName: '{\"text\":\"_Flag_E_\"}'}"
+    }
+}

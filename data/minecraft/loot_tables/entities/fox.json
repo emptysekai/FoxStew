@@ -1,0 +1,64 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "functions": [
+                {
+                    "function": "set_lore",
+                    "lore": [
+                        "§7配料§r",
+                        "§b烤香猪一块§3、§b脆脆鲨一条§r",
+                        "§b仙人掌一节§3、§b海龟蛋一个§r",
+                        "§b勇于献身的狐狸一只§3（可选）§r"
+                    ],
+                    "replace": false
+                }
+            ],
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "minecraft:reference",
+                    "name": "foxstew:killed_by_flag_e"
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "foxstew:this_name_is_fallen_breath"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:suspicious_stew"
+                }
+            ]
+        },
+        {
+            "rolls": {
+                "type": "minecraft:binomial",
+                "n": 11,
+                "p": 0.4514
+            },
+            "bonus_rolls": {
+                "min": 1.14,
+                "max": 5.14
+            },
+            "conditions": [
+                {
+                    "condition": "minecraft:killed_by_player",
+                    "inverse": true
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "foxstew:this_name_is_fallen_breath"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "minecraft:tag",
+                    "name": "foxstew:fallen_breath_collection",
+                    "expand": true
+                }
+            ]
+        }
+    ]
+}

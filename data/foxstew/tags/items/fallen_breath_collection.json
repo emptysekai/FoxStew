@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:cooked_porkchop",
+        "minecraft:cooked_cod",
+        "minecraft:cactus",
+        "minecraft:turtle_egg"
+    ]
+}
